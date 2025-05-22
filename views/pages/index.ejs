@@ -1,14 +1,25 @@
 <%- include('../partials/header') %>
-<main class="mainContent">
-  <div class="messages-container">
-    <ul>
+<main class="flex grow flex-col overflow-hidden dark:text-white dark:bg-black">
+  <div class="grow overflow-y-auto rounded-lg p-2 my-4">
+    <ul class="no-underline">
       <% messages.forEach((message) => { %>
-      <a href="/message/<%= message.user%>/<%= message.text%>">
-        <div class="message">
+      <a
+        class="no-underline block"
+        href="/message/<%= message.user%>/<%= message.text%>"
+      >
+        <div
+          class="border-b border-gray-200 px-2.5 py-2.5 transition duration-200 hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
+        >
           <li>
-            <h1><%= message.text %></h1>
-            <h2><%= message.user %></h2>
-            <h3><%= message.added %></h3>
+            <h1 class="text-lg font-normal mb-2 dark:text-white">
+              <%= message.text %>
+            </h1>
+            <h2 class="text-base text-gray-600 mb-1.5 dark:text-gray-400">
+              <%= message.user %>
+            </h2>
+            <h3 class="text-sm text-gray-400 mb-0 dark:text-gray-500">
+              <%= message.added %>
+            </h3>
           </li>
         </div>
       </a>

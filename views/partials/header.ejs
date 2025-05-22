@@ -1,20 +1,37 @@
+<!-- remember to vboxuser@Xubuntu:~/repos/minimessageboard$ npx @tailwindcss/cli -i ./public/styles.css -o ./public/output.css --watch -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html class="m-0 h-full" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/output.css" />
+    <script src="/darkmode.js"></script>
     <title><%= title %></title>
   </head>
-  <body>
-    <header class="header">
-      <div class="header__title">
-        <h1>Message Deluxe</h1>
-        <h3>The Real Time Messaging Board</h3>
+  <body class="m-0 h-full flex flex-col">
+    <header class="flex items-center justify-between bg-gray-800">
+      <div class="text-xl text-white px-2">
+        <h1 class="text-xl px-4 pt-2">Message Deluxe</h1>
+        <h3 class="px-4 py-2 pb-2">The Real Time Messaging Board</h3>
       </div>
-      <div class="header__cta">
-        <button>toggle Mode</button>
-        <a href="/new">Submit message</a>
+      <div class="flex flex-col items-center">
+        <button
+          class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 invert"
+          onclick="toggleDarkMode()"
+        >
+          <img
+            class="mix-blend-multiply size-8"
+            src="/download.png"
+            alt="darkmode"
+            srcset=""
+          />
+        </button>
+        <a
+          class="no-underline block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+          href="/new"
+          >Submit message</a
+        >
       </div>
     </header>
   </body>

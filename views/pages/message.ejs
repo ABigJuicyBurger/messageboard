@@ -1,10 +1,21 @@
 <%- include('../partials/header') %>
-<main class="mainContent">
-  <div class="singleMessage">
-    <h1><%= title %></h1>
-    <h3><%= message.text %></h3>
-    <h3>Posted on : <%= message.added %></h3>
+<main class="flex grow flex-col overflow-hidden dark:text-white dark:bg-black">
+  <div
+    class="rounded-lg border-b border-gray-200 px-4.5 py-4.5 transition duration-200 hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
+  >
+    <h1 class="text-lg font-normal mb-2 dark:text-white"><%= title %></h1>
+
+    <h2 class="text-base text-gray-600 mb-1.5 dark:text-gray-400">
+      <%= message.text %>
+    </h2>
+    <h3 class="text-sm text-gray-400 mb-0 dark:text-gray-500">
+      Posted on : <%= message.added %>
+    </h3>
+    <a
+      class="w-fit no-underline block rounded-md bg-gray-900 px-3 py-2 my-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+      href="/"
+      >Back to all messages</a
+    >
   </div>
-  <a href="/">Back to all messages</a>
 </main>
 <%- include("../partials/footer") %>

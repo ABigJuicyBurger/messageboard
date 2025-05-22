@@ -1,18 +1,42 @@
 <%- include('../partials/header') %>
-<main class="mainContent">
-  <fieldset class="messageField">
+<main
+  class="flex grow flex-col overflow-hidden dark:text-white dark:bg-black p-2"
+>
+  <fieldset
+    class="border-b border-gray-200 px-2.5 py-2.5 transition duration-200 hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
+  >
     <form id="messageForm" method="post" action="/new">
-      <div class="messageUser">
-        <label for="messageUser"> Your name </label>
-        <input type="text" id="messageUser" name="messageUser" />
+      <div class="w-1">
+        <label class="w-md" for="messageUser"> Your name </label>
+        <input
+          class="my-2 border-y-2 border-y-black-100"
+          type="text"
+          id="messageUser"
+          name="messageUser"
+        />
       </div>
-      <div class="messageText">
-        <label for="messageText"> Your message </label>
-        <input type="text" id="messageText" name="messageText" />
+      <div class="w-1">
+        <label for="max-w-1/6"> Your message </label>
+        <input
+          class="border-y-2 border-y-black-100"
+          type="text"
+          id="messageText"
+          name="messageText"
+        />
       </div>
-      <button type="submit" form="messageForm">Submit mess age</button>
+      <button
+        class="w-fit no-underline block rounded-md bg-gray-900 px-3 py-2 my-1.5 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+        type="submit"
+        form="messageForm"
+      >
+        Submit message
+      </button>
     </form>
-    <a href="/">Back to all messages</a>
+    <a
+      class="w-fit no-underline block rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+      href="/"
+      >Back to all messages</a
+    >
   </fieldset>
 </main>
 
