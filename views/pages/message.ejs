@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<main class="mainContent">
+  <div class="singleMessage">
+    <h1><%= title %></h1>
+    <h3><%= message.text %></h3>
+    <h3>Posted on : <%= message.added %></h3>
+  </div>
+  <a href="/">Back to all messages</a>
+</main>
+<%- include("../partials/footer") %>

@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+<main class="mainContent">
+  <fieldset class="messageField">
+    <form id="messageForm" method="post" action="/new">
+      <div class="messageUser">
+        <label for="messageUser"> Your name </label>
+        <input type="text" id="messageUser" name="messageUser" />
+      </div>
+      <div class="messageText">
+        <label for="messageText"> Your message </label>
+        <input type="text" id="messageText" name="messageText" />
+      </div>
+      <button type="submit" form="messageForm">Submit mess age</button>
+    </form>
+    <a href="/">Back to all messages</a>
+  </fieldset>
+</main>
+
+<%- include("../partials/footer") %>
