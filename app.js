@@ -5,7 +5,7 @@ import path from "path";
 import { messages } from "./dataStorage.js";
 
 const app = express();
-const port = 3000;
+const port = 8000;
 
 const __dirname = import.meta.dirname;
 
